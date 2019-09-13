@@ -1,0 +1,8 @@
+
+\.vs/Lab_1/v15/
+
+Lab_1/obj/Debug/DesignTimeResolveAssemblyReferences\.cache
+
+*.cache
+
+*.dll
