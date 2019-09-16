@@ -12,16 +12,20 @@ namespace Lab_1
         public string lastName;
         public string fullName;
         public Group group;
-        private uint[] marks = new uint[3];
+        public int groupIndex;
+        public int mark0, mark1, mark2;
 
-        public Student(string firstName,string lastName, Group group, uint[] marks)
+        public Student(string firstName,string lastName, int groupIndex, int[] marks)
         {
             this.firstName = firstName;
             this.lastName = lastName;
             this.fullName = firstName + " " + lastName;
-            this.group = group;
-            group.students.Add(this);
-            this.marks = marks;
+            this.groupIndex = groupIndex;
+            //this.groupIndex = groupIndex;
+           // group.students.Add(this);
+            mark0 = marks[0];
+            mark1 = marks[1];
+            mark2 = marks[2];
         }
     }
 }

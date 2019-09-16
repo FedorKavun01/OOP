@@ -13,8 +13,8 @@ namespace Lab_1
 {
     public partial class FormSignIn : Form
     {
-        String loginAdmin = "admin";
-        String passwordAdmin = "admin";
+        String loginAdmin = "1";
+        String passwordAdmin = "1";
         String loginUser = "user";
         String passwordUser = "user";
 

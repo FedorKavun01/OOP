@@ -34,27 +34,28 @@
             this.textBoxLastName = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
             this.comboBoxGroup = new System.Windows.Forms.ComboBox();
-            this.buttonCreate = new System.Windows.Forms.Button();
+            this.buttonSave = new System.Windows.Forms.Button();
             this.buttonRemove = new System.Windows.Forms.Button();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.listBox1 = new System.Windows.Forms.ListBox();
+            this.textBoxSearch = new System.Windows.Forms.TextBox();
+            this.listBoxStudents = new System.Windows.Forms.ListBox();
             this.comboBoxSearch = new System.Windows.Forms.ComboBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.textBox3 = new System.Windows.Forms.TextBox();
-            this.textBox4 = new System.Windows.Forms.TextBox();
+            this.textBoxOOP = new System.Windows.Forms.TextBox();
+            this.textBoxDS = new System.Windows.Forms.TextBox();
+            this.textBoxTA = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
             this.pictureBoxSearch = new System.Windows.Forms.PictureBox();
             this.pictureBoxBack = new System.Windows.Forms.PictureBox();
+            this.buttonNotEdit = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxSearch)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxBack)).BeginInit();
             this.SuspendLayout();
             // 
             // textBoxName
             // 
-            this.textBoxName.Location = new System.Drawing.Point(150, 11);
+            this.textBoxName.Location = new System.Drawing.Point(165, 11);
             this.textBoxName.Name = "textBoxName";
             this.textBoxName.Size = new System.Drawing.Size(189, 22);
             this.textBoxName.TabIndex = 2;
@@ -62,7 +63,7 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(64, 16);
+            this.label1.Location = new System.Drawing.Point(79, 16);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(35, 17);
             this.label1.TabIndex = 3;
@@ -71,7 +72,7 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(64, 63);
+            this.label2.Location = new System.Drawing.Point(79, 63);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(74, 17);
             this.label2.TabIndex = 5;
@@ -79,7 +80,7 @@
             // 
             // textBoxLastName
             // 
-            this.textBoxLastName.Location = new System.Drawing.Point(150, 63);
+            this.textBoxLastName.Location = new System.Drawing.Point(165, 63);
             this.textBoxLastName.Name = "textBoxLastName";
             this.textBoxLastName.Size = new System.Drawing.Size(189, 22);
             this.textBoxLastName.TabIndex = 4;
@@ -87,7 +88,7 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(64, 118);
+            this.label3.Location = new System.Drawing.Point(79, 118);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(51, 17);
             this.label3.TabIndex = 7;
@@ -95,83 +96,95 @@
             // 
             // comboBoxGroup
             // 
+            this.comboBoxGroup.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.comboBoxGroup.FormattingEnabled = true;
-            this.comboBoxGroup.Location = new System.Drawing.Point(150, 111);
+            this.comboBoxGroup.Items.AddRange(new object[] {
+            "- не вибрано -",
+            "IT-82",
+            "IT-84"});
+            this.comboBoxGroup.Location = new System.Drawing.Point(165, 111);
             this.comboBoxGroup.Name = "comboBoxGroup";
             this.comboBoxGroup.Size = new System.Drawing.Size(189, 24);
             this.comboBoxGroup.TabIndex = 8;
             // 
-            // buttonCreate
+            // buttonSave
             // 
-            this.buttonCreate.Location = new System.Drawing.Point(8, 352);
-            this.buttonCreate.Name = "buttonCreate";
-            this.buttonCreate.Size = new System.Drawing.Size(113, 39);
-            this.buttonCreate.TabIndex = 9;
-            this.buttonCreate.Text = "Зберегти";
-            this.buttonCreate.UseVisualStyleBackColor = true;
+            this.buttonSave.Location = new System.Drawing.Point(9, 349);
+            this.buttonSave.Name = "buttonSave";
+            this.buttonSave.Size = new System.Drawing.Size(120, 39);
+            this.buttonSave.TabIndex = 9;
+            this.buttonSave.Text = "Зберегти";
+            this.buttonSave.UseVisualStyleBackColor = true;
+            this.buttonSave.Click += new System.EventHandler(this.buttonSave_Click);
             // 
             // buttonRemove
             // 
-            this.buttonRemove.Location = new System.Drawing.Point(226, 352);
+            this.buttonRemove.Enabled = false;
+            this.buttonRemove.Location = new System.Drawing.Point(261, 349);
             this.buttonRemove.Name = "buttonRemove";
-            this.buttonRemove.Size = new System.Drawing.Size(113, 39);
+            this.buttonRemove.Size = new System.Drawing.Size(120, 39);
             this.buttonRemove.TabIndex = 10;
             this.buttonRemove.Text = "Видалити";
             this.buttonRemove.UseVisualStyleBackColor = true;
+            this.buttonRemove.Click += new System.EventHandler(this.buttonRemove_Click);
             // 
-            // textBox1
+            // textBoxSearch
             // 
-            this.textBox1.Location = new System.Drawing.Point(368, 11);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(176, 22);
-            this.textBox1.TabIndex = 11;
+            this.textBoxSearch.Location = new System.Drawing.Point(387, 11);
+            this.textBoxSearch.Name = "textBoxSearch";
+            this.textBoxSearch.Size = new System.Drawing.Size(176, 22);
+            this.textBoxSearch.TabIndex = 11;
             // 
-            // listBox1
+            // listBoxStudents
             // 
-            this.listBox1.FormattingEnabled = true;
-            this.listBox1.ItemHeight = 16;
-            this.listBox1.Location = new System.Drawing.Point(368, 64);
-            this.listBox1.Name = "listBox1";
-            this.listBox1.Size = new System.Drawing.Size(353, 324);
-            this.listBox1.TabIndex = 12;
+            this.listBoxStudents.FormattingEnabled = true;
+            this.listBoxStudents.HorizontalScrollbar = true;
+            this.listBoxStudents.ItemHeight = 16;
+            this.listBoxStudents.Location = new System.Drawing.Point(387, 64);
+            this.listBoxStudents.Name = "listBoxStudents";
+            this.listBoxStudents.ScrollAlwaysVisible = true;
+            this.listBoxStudents.Size = new System.Drawing.Size(353, 324);
+            this.listBoxStudents.TabIndex = 12;
+            this.listBoxStudents.SelectedIndexChanged += new System.EventHandler(this.listBoxStudents_SelectedIndexChanged);
             // 
             // comboBoxSearch
             // 
+            this.comboBoxSearch.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.comboBoxSearch.FormattingEnabled = true;
             this.comboBoxSearch.Items.AddRange(new object[] {
             "Група",
             "Прізвище",
             "Ім\'я"});
-            this.comboBoxSearch.Location = new System.Drawing.Point(550, 9);
+            this.comboBoxSearch.Location = new System.Drawing.Point(569, 10);
             this.comboBoxSearch.Name = "comboBoxSearch";
             this.comboBoxSearch.Size = new System.Drawing.Size(121, 24);
             this.comboBoxSearch.TabIndex = 13;
             // 
-            // textBox2
+            // textBoxOOP
             // 
-            this.textBox2.Location = new System.Drawing.Point(150, 204);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(100, 22);
-            this.textBox2.TabIndex = 14;
+            this.textBoxOOP.Location = new System.Drawing.Point(165, 204);
+            this.textBoxOOP.Name = "textBoxOOP";
+            this.textBoxOOP.Size = new System.Drawing.Size(100, 22);
+            this.textBoxOOP.TabIndex = 14;
             // 
-            // textBox3
+            // textBoxDS
             // 
-            this.textBox3.Location = new System.Drawing.Point(150, 292);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(100, 22);
-            this.textBox3.TabIndex = 15;
+            this.textBoxDS.Location = new System.Drawing.Point(165, 292);
+            this.textBoxDS.Name = "textBoxDS";
+            this.textBoxDS.Size = new System.Drawing.Size(100, 22);
+            this.textBoxDS.TabIndex = 15;
             // 
-            // textBox4
+            // textBoxTA
             // 
-            this.textBox4.Location = new System.Drawing.Point(150, 249);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(100, 22);
-            this.textBox4.TabIndex = 16;
+            this.textBoxTA.Location = new System.Drawing.Point(165, 249);
+            this.textBoxTA.Name = "textBoxTA";
+            this.textBoxTA.Size = new System.Drawing.Size(100, 22);
+            this.textBoxTA.TabIndex = 16;
             // 
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(94, 209);
+            this.label4.Location = new System.Drawing.Point(109, 209);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(44, 17);
             this.label4.TabIndex = 17;
@@ -180,7 +193,7 @@
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(94, 254);
+            this.label5.Location = new System.Drawing.Point(109, 254);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(30, 17);
             this.label5.TabIndex = 18;
@@ -189,7 +202,7 @@
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(94, 295);
+            this.label6.Location = new System.Drawing.Point(109, 295);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(32, 17);
             this.label6.TabIndex = 19;
@@ -198,7 +211,7 @@
             // label7
             // 
             this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(64, 170);
+            this.label7.Location = new System.Drawing.Point(79, 170);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(57, 17);
             this.label7.TabIndex = 20;
@@ -207,17 +220,18 @@
             // pictureBoxSearch
             // 
             this.pictureBoxSearch.Image = global::Lab_1.Properties.Resources.search;
-            this.pictureBoxSearch.Location = new System.Drawing.Point(677, 3);
+            this.pictureBoxSearch.Location = new System.Drawing.Point(696, 3);
             this.pictureBoxSearch.Name = "pictureBoxSearch";
             this.pictureBoxSearch.Size = new System.Drawing.Size(44, 46);
             this.pictureBoxSearch.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBoxSearch.TabIndex = 22;
             this.pictureBoxSearch.TabStop = false;
+            this.pictureBoxSearch.Click += new System.EventHandler(this.pictureBoxSearch_Click);
             // 
             // pictureBoxBack
             // 
             this.pictureBoxBack.Image = global::Lab_1.Properties.Resources.backArrom;
-            this.pictureBoxBack.Location = new System.Drawing.Point(12, 11);
+            this.pictureBoxBack.Location = new System.Drawing.Point(27, 11);
             this.pictureBoxBack.Name = "pictureBoxBack";
             this.pictureBoxBack.Size = new System.Drawing.Size(38, 38);
             this.pictureBoxBack.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -225,32 +239,49 @@
             this.pictureBoxBack.TabStop = false;
             this.pictureBoxBack.Click += new System.EventHandler(this.pictureBoxBack_Click);
             // 
+            // buttonNotEdit
+            // 
+            this.buttonNotEdit.Enabled = false;
+            this.buttonNotEdit.Location = new System.Drawing.Point(135, 349);
+            this.buttonNotEdit.Name = "buttonNotEdit";
+            this.buttonNotEdit.Size = new System.Drawing.Size(120, 39);
+            this.buttonNotEdit.TabIndex = 23;
+            this.buttonNotEdit.Text = "Не редагувати";
+            this.buttonNotEdit.UseVisualStyleBackColor = true;
+            this.buttonNotEdit.Click += new System.EventHandler(this.buttonNotEdit_Click);
+            // 
             // AdminForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(738, 407);
+            this.ClientSize = new System.Drawing.Size(760, 407);
+            this.Controls.Add(this.buttonNotEdit);
             this.Controls.Add(this.pictureBoxSearch);
             this.Controls.Add(this.pictureBoxBack);
             this.Controls.Add(this.label7);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.label4);
-            this.Controls.Add(this.textBox4);
-            this.Controls.Add(this.textBox3);
-            this.Controls.Add(this.textBox2);
+            this.Controls.Add(this.textBoxTA);
+            this.Controls.Add(this.textBoxDS);
+            this.Controls.Add(this.textBoxOOP);
             this.Controls.Add(this.comboBoxSearch);
-            this.Controls.Add(this.listBox1);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.listBoxStudents);
+            this.Controls.Add(this.textBoxSearch);
             this.Controls.Add(this.buttonRemove);
-            this.Controls.Add(this.buttonCreate);
+            this.Controls.Add(this.buttonSave);
             this.Controls.Add(this.comboBoxGroup);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.textBoxLastName);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.textBoxName);
+            this.MaximizeBox = false;
+            this.MaximumSize = new System.Drawing.Size(778, 454);
+            this.MinimizeBox = false;
+            this.MinimumSize = new System.Drawing.Size(778, 454);
             this.Name = "AdminForm";
+            this.ShowIcon = false;
             this.Text = "AdminForm";
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxSearch)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxBack)).EndInit();
@@ -266,19 +297,20 @@
         private System.Windows.Forms.TextBox textBoxLastName;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.ComboBox comboBoxGroup;
-        private System.Windows.Forms.Button buttonCreate;
+        private System.Windows.Forms.Button buttonSave;
         private System.Windows.Forms.Button buttonRemove;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.ListBox listBox1;
+        private System.Windows.Forms.TextBox textBoxSearch;
+        private System.Windows.Forms.ListBox listBoxStudents;
         private System.Windows.Forms.ComboBox comboBoxSearch;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.TextBox textBox3;
-        private System.Windows.Forms.TextBox textBox4;
+        private System.Windows.Forms.TextBox textBoxOOP;
+        private System.Windows.Forms.TextBox textBoxDS;
+        private System.Windows.Forms.TextBox textBoxTA;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.PictureBox pictureBoxBack;
         private System.Windows.Forms.PictureBox pictureBoxSearch;
+        private System.Windows.Forms.Button buttonNotEdit;
     }
 }
