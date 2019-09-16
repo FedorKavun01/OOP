@@ -20,17 +20,17 @@ namespace Lab_1
             InitializeComponent();
         }
 
-        private void buttonBack_Click(object sender, EventArgs e)
+        private void Open(object obj)
+        {
+            Application.Run(new FormSignIn());
+        }
+
+        private void pictureBoxBack_Click(object sender, EventArgs e)
         {
             this.Close();
             thread = new Thread(Open);
             thread.SetApartmentState(ApartmentState.STA);
             thread.Start();
-        }
-
-        private void Open(object obj)
-        {
-            Application.Run(new FormSignIn());
         }
     }
 }
