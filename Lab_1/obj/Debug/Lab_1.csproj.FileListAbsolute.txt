@@ -34,3 +34,15 @@ D:\KPI\OOP\OOP\Lab_1\obj\Debug\Lab_1.csproj.GenerateResource.cache
 D:\KPI\OOP\OOP\Lab_1\obj\Debug\Lab_1.csproj.CoreCompileInputs.cache
 D:\KPI\OOP\OOP\Lab_1\obj\Debug\Lab_1.exe
 D:\KPI\OOP\OOP\Lab_1\obj\Debug\Lab_1.pdb
+D:\Study\ІІ курс\ООП\OOP\Lab_1\bin\Debug\Lab_1.exe.config
+D:\Study\ІІ курс\ООП\OOP\Lab_1\bin\Debug\Lab_1.exe
+D:\Study\ІІ курс\ООП\OOP\Lab_1\bin\Debug\Lab_1.pdb
+D:\Study\ІІ курс\ООП\OOP\Lab_1\obj\Debug\Lab_1.csprojAssemblyReference.cache
+D:\Study\ІІ курс\ООП\OOP\Lab_1\obj\Debug\Lab_1.AdminForm.resources
+D:\Study\ІІ курс\ООП\OOP\Lab_1\obj\Debug\Lab_1.FormSignIn.resources
+D:\Study\ІІ курс\ООП\OOP\Lab_1\obj\Debug\Lab_1.Properties.Resources.resources
+D:\Study\ІІ курс\ООП\OOP\Lab_1\obj\Debug\Lab_1.UserForm.resources
+D:\Study\ІІ курс\ООП\OOP\Lab_1\obj\Debug\Lab_1.csproj.GenerateResource.cache
+D:\Study\ІІ курс\ООП\OOP\Lab_1\obj\Debug\Lab_1.csproj.CoreCompileInputs.cache
+D:\Study\ІІ курс\ООП\OOP\Lab_1\obj\Debug\Lab_1.exe
+D:\Study\ІІ курс\ООП\OOP\Lab_1\obj\Debug\Lab_1.pdb
