@@ -47,7 +47,7 @@ namespace Lab_1
 
         private void Open()
         {
-            if(admin)
+            if (admin)
                 Application.Run(new AdminForm());
             else
                 Application.Run(new UserForm());

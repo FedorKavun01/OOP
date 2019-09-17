@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.textBoxName = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
@@ -48,9 +49,11 @@
             this.label7 = new System.Windows.Forms.Label();
             this.pictureBoxSearch = new System.Windows.Forms.PictureBox();
             this.pictureBoxBack = new System.Windows.Forms.PictureBox();
-            this.buttonNotEdit = new System.Windows.Forms.Button();
+            this.dBControllerBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.buttonCreate = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxSearch)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxBack)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dBControllerBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // textBoxName
@@ -239,23 +242,26 @@
             this.pictureBoxBack.TabStop = false;
             this.pictureBoxBack.Click += new System.EventHandler(this.pictureBoxBack_Click);
             // 
-            // buttonNotEdit
+            // dBControllerBindingSource
             // 
-            this.buttonNotEdit.Enabled = false;
-            this.buttonNotEdit.Location = new System.Drawing.Point(135, 349);
-            this.buttonNotEdit.Name = "buttonNotEdit";
-            this.buttonNotEdit.Size = new System.Drawing.Size(120, 39);
-            this.buttonNotEdit.TabIndex = 23;
-            this.buttonNotEdit.Text = "Не редагувати";
-            this.buttonNotEdit.UseVisualStyleBackColor = true;
-            this.buttonNotEdit.Click += new System.EventHandler(this.buttonNotEdit_Click);
+            this.dBControllerBindingSource.DataSource = typeof(Lab_1.DBController);
+            // 
+            // buttonCreate
+            // 
+            this.buttonCreate.Location = new System.Drawing.Point(135, 349);
+            this.buttonCreate.Name = "buttonCreate";
+            this.buttonCreate.Size = new System.Drawing.Size(120, 39);
+            this.buttonCreate.TabIndex = 23;
+            this.buttonCreate.Text = "Створити";
+            this.buttonCreate.UseVisualStyleBackColor = true;
+            this.buttonCreate.Click += new System.EventHandler(this.buttonCreate_Click);
             // 
             // AdminForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(760, 407);
-            this.Controls.Add(this.buttonNotEdit);
+            this.Controls.Add(this.buttonCreate);
             this.Controls.Add(this.pictureBoxSearch);
             this.Controls.Add(this.pictureBoxBack);
             this.Controls.Add(this.label7);
@@ -285,6 +291,7 @@
             this.Text = "AdminForm";
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxSearch)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxBack)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dBControllerBindingSource)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -311,6 +318,7 @@
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.PictureBox pictureBoxBack;
         private System.Windows.Forms.PictureBox pictureBoxSearch;
-        private System.Windows.Forms.Button buttonNotEdit;
+        private System.Windows.Forms.BindingSource dBControllerBindingSource;
+        private System.Windows.Forms.Button buttonCreate;
     }
 }

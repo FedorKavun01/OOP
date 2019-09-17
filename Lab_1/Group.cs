@@ -6,9 +6,15 @@ using System.Threading.Tasks;
 
 namespace Lab_1
 {
+    [Serializable]
     class Group
     {
-        public String name;
+        public string name;
         public List<Student> students; 
+
+        public Group(string name)
+        {
+            this.name = name;
+        }
     }
 }
