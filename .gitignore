@@ -7,5 +7,4 @@ Lab_1/obj/Debug/DesignTimeResolveAssemblyReferences\.cache
 
 *.dll
 
-public/excel/
-!public/excel
+public2/excel/*.xlsx
